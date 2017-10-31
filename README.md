@@ -33,9 +33,6 @@ The body of your POST request contains a JSON object of type AnnotateImageReques
   },
 }
 ```
-#### Input Image
- 
-![](https://github.com/farhanh/raw-images/blob/master/abbey_road.png "Sample")
 
 ## 1. Text Detection (OCR)
 The Vision API can detect and extract text from images. For example, a photograph might contain a street sign or traffic sign. 
@@ -43,6 +40,10 @@ The JSON includes the entire extracted string, as well as individual words, and 
 Here we are discussing only one feature that support OCR:
 
 - TEXT_DETECTION   
+
+#### Input Image
+ 
+![](https://github.com/farhanh/raw-images/blob/master/abbey_road.png "Sample")
 
 ### Sample Request
 Image can be sent as a base64-encoded string, a Google Cloud Storage file location, or as a publicly-accessible URL, ImageContext is optional & used very rarely based on your request parameters, So we are skipping it. 
@@ -99,22 +100,7 @@ You can try this request in Google Vision API [console](https://developers.googl
           "description": "ABBEY",
           "boundingPoly": {
             "vertices": [
-              {
-                "x": 45,
-                "y": 50
-              },
-              {
-                "x": 181,
-                "y": 43
-              },
-              {
-                "x": 183,
-                "y": 80
-              },
-              {
-                "x": 47,
-                "y": 87
-              }
+              ...
             ]
           }
         },
@@ -122,22 +108,7 @@ You can try this request in Google Vision API [console](https://developers.googl
           "description": "ROAD",
           "boundingPoly": {
             "vertices": [
-              {
-                "x": 48,
-                "y": 96
-              },
-              {
-                "x": 155,
-                "y": 96
-              },
-              {
-                "x": 155,
-                "y": 132
-              },
-              {
-                "x": 48,
-                "y": 132
-              }
+             ...
             ]
           }
         },
@@ -145,22 +116,7 @@ You can try this request in Google Vision API [console](https://developers.googl
           "description": "NW8",
           "boundingPoly": {
             "vertices": [
-              {
-                "x": 182,
-                "y": 95
-              },
-              {
-                "x": 269,
-                "y": 95
-              },
-              {
-                "x": 269,
-                "y": 130
-              },
-              {
-                "x": 182,
-                "y": 130
-              }
+             ...
             ]
           }
         },
@@ -168,22 +124,7 @@ You can try this request in Google Vision API [console](https://developers.googl
           "description": "CITY",
           "boundingPoly": {
             "vertices": [
-              {
-                "x": 51,
-                "y": 162
-              },
-              {
-                "x": 85,
-                "y": 161
-              },
-              {
-                "x": 85,
-                "y": 177
-              },
-              {
-                "x": 51,
-                "y": 178
-              }
+             ...
             ]
           }
         },
@@ -191,22 +132,7 @@ You can try this request in Google Vision API [console](https://developers.googl
           "description": "OF",
           "boundingPoly": {
             "vertices": [
-              {
-                "x": 95,
-                "y": 162
-              },
-              {
-                "x": 111,
-                "y": 162
-              },
-              {
-                "x": 111,
-                "y": 176
-              },
-              {
-                "x": 95,
-                "y": 176
-              }
+             ...
             ]
           }
         },
@@ -214,22 +140,7 @@ You can try this request in Google Vision API [console](https://developers.googl
           "description": "WESTMINSTER",
           "boundingPoly": {
             "vertices": [
-              {
-                "x": 124,
-                "y": 162
-              },
-              {
-                "x": 249,
-                "y": 160
-              },
-              {
-                "x": 249,
-                "y": 174
-              },
-              {
-                "x": 124,
-                "y": 176
-              }
+             ...
             ]
           }
         }
@@ -248,6 +159,10 @@ we need to specify LABEL_DETECTION as the value of features.type, same as above,
 
 API implementation would be the same as described above, so moving to next step
 
+#### Input Image
+ 
+![](https://github.com/farhanh/raw-images/blob/master/ferris-wheel.jpg "Sample")
+
 ### Sample Request
 
 ```
@@ -256,7 +171,7 @@ API implementation would be the same as described above, so moving to next step
     {
       "image": {
         "source": {
-          "imageUri": "https://cloud.google.com/vision/docs/images/ferris-wheel.jpg"
+          "imageUri": "https://github.com/farhanh/raw-images/blob/master/ferris-wheel.jpg"
         }
       },
       "features": [
