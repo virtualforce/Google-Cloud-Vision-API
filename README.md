@@ -2,7 +2,7 @@
 Google Cloud Vision API enables developers to understand the content of an image by encapsulating powerful machine learning models in an easy to use REST API. It quickly classifies images into thousands of categories (e.g., "sailboat", "lion", "Eiffel Tower"), detects individual objects, faces within images, finds/reads printed words and contained within images.
 
 ## Getting Started
-The Visoin API has very broader scope but we will discuss only two features and its API Implementation here:
+The Visoin API has very broader scope therefore we will discuss only two features and its API Implementation here:
 
 1. Text Detection (OCR)   
 2. Label Detection
